@@ -1,7 +1,7 @@
 class Solution {
     public String solution(int num) {
-        String answer = ""; 
-        if (num % 2 ==0) answer = "Even"; //2로 나누었을 때 나머지가 0이면 짝수
+        String answer = "";
+        if (num % 2 ==0) answer = "Even";
         else answer = "Odd";
         return answer;
     }
