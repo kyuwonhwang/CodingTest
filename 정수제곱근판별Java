@@ -1,0 +1,14 @@
+class Solution {
+    public long solution(long n) {
+        long answer = 0;
+        
+        for(long i=0 ; i*i <= n ; i++) {
+            if(n == i*i) { 
+                answer = (i + 1) * (i + 1);
+                break;
+            } //i*i가 n이라면 반복문 break 하고 answer 출력
+            else answer = -1; //아니면 -1출력
+        }
+        return answer;
+    }
+}
