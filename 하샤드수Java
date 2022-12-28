@@ -1,0 +1,12 @@
+class Solution {
+    public boolean solution(int x) {
+        int num = x;
+        int sum = 0;
+        
+        while (num != 0){ //계속 10으로 나눈 나머지(자릿수) 구해서 더하기
+            sum += num % 10 ;
+            num /= 10;
+        }
+        return x % sum == 0 ? true : false; //x가 합으로 나뉘어지면 true 반환
+    }       
+}
