@@ -1,7 +1,7 @@
 class Solution {
     public int solution(int n) {
         int answer = 0;
-        
+        //가장 작은 x을 찾는 것이므로 i = 2부터 n까지 반복하며 증가, 나머지가 1이 되면 return.
         for (int i=2; i<n; i++){
             if (n % i == 1){
                 answer = i;

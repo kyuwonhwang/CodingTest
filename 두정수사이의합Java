@@ -1,0 +1,18 @@
+class Solution {
+    public long solution(int a, int b) {
+        long answer = 0;
+        //a와 b의 크기를 비교(조건문)해서 작은 수부터 큰 수까지 더해주기(반복문)
+            if(a < b){
+            for (int i=a; i<=b ; i++){
+            answer += i;
+            }
+        }
+        else {
+            for (int i=b; i<=a; i++){
+            answer += i;
+            }
+        }
+        return answer;
+    }
+}
+
