@@ -1,8 +1,20 @@
+import java.util.*;
+
 class Solution {
-    public void solution() {
+    public long solution(long n) {
         long answer = 0;
-        long[] arr = Longs.toArray(11875L);
+        String s = Long.toString(n);
+        char[] nb = s.toCharArray();
+        Arrays.sort(nb);
+        List<Character> chars = new ArrayList<>();
+        for(char c : nb){
+            chars.add(c);
+        }
+        Collections.reverse(chars);
         
-        System.out.println(arr);
+        String convertIntToString = chars.toString().replaceAll("[^0-9]", "");
+        answer= Long.parseLong(convertIntToString);
+        
+        return answer;
     }
 }
