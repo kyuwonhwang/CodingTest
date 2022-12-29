@@ -1,0 +1,8 @@
+class Solution {
+    public void solution() {
+        long answer = 0;
+        long[] arr = Longs.toArray(11875L);
+        
+        System.out.println(arr);
+    }
+}
