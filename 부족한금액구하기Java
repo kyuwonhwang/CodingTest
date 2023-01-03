@@ -1,0 +1,15 @@
+class Solution {
+    public long solution(int price, int money, int count) {
+        long answer = 0;
+        long sum = 0;
+        //놀이기구를 count번 타기 위해 필요한 금액 구하기
+        for (int i=1; i < count+1; i++){
+            sum += price * i ;
+        }
+        //위에서 구한 금액이 가진 돈보다 크다면 차액 반환
+        if (sum > money){
+            return sum - money;
+        }
+        return answer;
+    }
+}

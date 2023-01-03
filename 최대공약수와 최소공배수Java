@@ -1,0 +1,23 @@
+class Solution {
+    public int[] solution(int n, int m) {
+        int[] answer = new int[2];
+        int big = 0, small =0; // 큰 수, 작은 수를 나눠주기 위한 변수 생성.
+        if(n>m) { // 큰 수를 big, 작은 수를 small에 저장.
+            big = n; 
+            small = m;
+        } else {
+            big = m;
+            small = n;
+        }
+        answer[0] = gcd(big, small); // 0번 인덱스에 최대공약수
+        answer[1] = big*small / answer[0]; // 1번 인덱스에 최소공배수
+        return answer;
+    }
+    // 유클리드 호제법으로 최대공약수 구하기.
+    public int gcd(int big, int small) { 
+        if(big % small == 0) { // 만약 나누어 떨어지면 small이 최대공약수.
+        return small;
+        } 
+    	else return gcd(small, big%small); //나누어 떨어지지 않으면 small이 big 자리에 가고 small자리에는 big을 small로 나눈 나머지 값이 온다.
+    }
+}

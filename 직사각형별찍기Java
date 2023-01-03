@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+class Solution {
+    public static void main(String[] args) {
+        //System.in 은 사용자로부터 입력을 받기 위한 입력 스트림
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        //바깥for문에서 세로길이 입력값 만큼 줄바꿈
+        for (int j=1; j<=b; j++){
+            //안쪽for문에서 가로길이 입력값만큼 별찍기
+            for (int i=1; i<= a; i++){
+                System.out.printf("*");
+            }
+        System.out.println("");
+        }
+    }
+}
