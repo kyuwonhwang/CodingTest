@@ -1,0 +1,11 @@
+class Solution {
+    public int solution(int[] numbers) {
+        //0~9까지 합 
+        int sum = 45;
+        //numbers 배열의 값을 하나씩 빼기
+        for(int i=0; i<numbers.length; i++){
+            sum -= numbers[i];
+        }
+        return sum;
+    }
+}

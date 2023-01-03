@@ -1,0 +1,16 @@
+class Solution {
+    public String solution(String s) {
+        String answer = "";
+        //특정위치 문자열 반환 String substring(int beginIndex부터, int endIndex직전) 
+        
+        //길이가 짝수인 경우 가운데 두글자 반환
+        if(s.length() % 2 == 0){ 
+            answer = s.substring(s.length()/2-1, s.length()/2+1);
+        //길이가 홀수인 경우 가운데 한글자 반환
+        }else { 
+            answer = s.substring(s.length()/2, s.length()/2+1);
+        }
+
+        return answer;
+    }
+}

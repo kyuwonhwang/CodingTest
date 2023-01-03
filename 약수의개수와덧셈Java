@@ -1,0 +1,22 @@
+class Solution {
+    public int solution(int left, int right) {
+        int answer = 0;
+        int cnt = 0;
+        //이중반복문 -  1) left부터 right까지 반복하며 개수 세는 반복문
+        for(int i = left; i <= right; i++){
+            cnt = 0;
+            // 2) 1부터 left(자기 자신)까지를 반복하여 약수를 구하는 반복문
+            for(int j = 1; j<= i; j++){
+                if( i % j == 0) cnt++;
+            }
+            //약수의 개수가 짝수인 수는 더해주기
+            if( cnt % 2 == 0){
+                answer += i;
+            //약수의 개수가 홀수인 수는 빼주기
+            }else{
+                answer -= i;
+            }
+        }
+        return answer;
+    }
+}

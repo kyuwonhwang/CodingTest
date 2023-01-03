@@ -1,0 +1,11 @@
+class Solution {
+    public int solution(int[] a, int[] b) {
+        int answer = 0;
+        int length = a.length;
+        //배열의 길이만큼 반복하여 같은 인덱스의 두 배열 값을 곱해서 누적합 구하기
+        for (int i = 0; i < length; i++) {
+            answer += a[i]*b[i];
+        }
+    return answer;
+    }
+}

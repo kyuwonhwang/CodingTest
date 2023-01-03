@@ -1,0 +1,12 @@
+class Solution {
+    public String solution(String phone_number) {
+        // 문자열을 잘라서 char 배열에 담기
+        char[] nb = phone_number.toCharArray();
+        // for문으로 뒷4자리 제외 별찍기
+        for(int i = 0; i < nb.length - 4; i ++){
+            nb[i] = '*';
+        }
+    // valueOf static 메서드 사용해서 배열을 스트링으로 convert.
+    return String.valueOf(nb);
+  }
+}
